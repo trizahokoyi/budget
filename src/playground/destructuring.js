@@ -7,8 +7,15 @@ const person = {
         temp: 95
     }
 };
+var payload = {
+    incrementBy: 7
+}
+console.log(payload.incrementBy);
 
+var {incrementBy} = payload;
+console.log(incrementBy);
 const {name} = person;
+
 //console.log(temp);
 //console.log(city);
 //console.log(name);

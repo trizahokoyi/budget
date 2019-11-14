@@ -1,18 +1,17 @@
 import {createStore} from 'redux';
 
 //action creators - functions that return objects/actions 
-const incrementCount = ({ incrementBy = 1 } = {}) => {
+const incrementCount = (payload = {}) => {
     return{
         type: 'INCREMENT',
-        incrementBy
-     
+        incrementBy: typeof payload.incrementBy === 'number' ? payload.incrementBy: 1
     };
 };
 
-const decrementCount = ({ decrementBy = 1 } = {}) => {
+const decrementCount = (payload = {}) => {
     return{
         type: 'DECREMENT',
-        decrementBy
+        decrementBy: typeof payload.decrementBy === 'number' ? payload.decrementBy: 1
     };
 };
 
